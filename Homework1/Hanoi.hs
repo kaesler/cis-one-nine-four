@@ -27,5 +27,5 @@ hanoi4 2 src dst alt1 _ = [(src, alt1), (src, dst), (alt1, dst)]
 --    move all at alt1 over to dst
 hanoi4 n src dst alt1 alt2 =
   (hanoi4 (n - 2) src alt1 dst alt2)
-   ++ [(src, alt2), (src, dst), (alt1, dst)]
+   ++ [(src, alt2), (src, dst), (alt2, dst)]
    ++ (hanoi4 (n - 2) alt1 dst alt2 src)
